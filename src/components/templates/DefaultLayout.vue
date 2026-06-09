@@ -2,11 +2,12 @@
 /**
  * DefaultLayout — TEMPLATE.
  * Le squelette de page : le "chrome" qui entoure tout contenu
- * (bandeau + navbar), puis un <slot> où la PAGE viendra s'insérer.
- * Aucune donnée métier ici → c'est juste la mise en page.
+ * (bandeau + navbar en haut, footer en bas), avec un <slot> au milieu
+ * où la PAGE vient s'insérer. Aucune donnée métier ici.
  */
 import TheAnnouncementBar from '@/components/organisms/TheAnnouncementBar.vue'
 import TheNavbar from '@/components/organisms/TheNavbar.vue'
+import TheFooter from '@/components/organisms/TheFooter.vue'
 </script>
 
 <template>
@@ -15,4 +16,5 @@ import TheNavbar from '@/components/organisms/TheNavbar.vue'
   <main>
     <slot />
   </main>
+  <TheFooter />
 </template>

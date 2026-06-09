@@ -12,6 +12,15 @@ import PhoneMockup from '@/components/organisms/PhoneMockup.vue'
 
 <template>
   <section class="hero">
+    <!-- Décor : traits diagonaux bleu clair en haut à droite -->
+    <svg class="hero__lines" viewBox="0 0 220 320" aria-hidden="true">
+      <g stroke="#7FD8F7" stroke-width="11" stroke-linecap="round" fill="none">
+        <path d="M40 330 L150 70" />
+        <path d="M72 330 L182 70" />
+        <path d="M104 330 L214 70" />
+      </g>
+    </svg>
+
     <div class="hero__inner container">
       <div class="hero__content">
         <BaseHeading :level="1" class="hero__title">
@@ -61,14 +70,28 @@ import PhoneMockup from '@/components/organisms/PhoneMockup.vue'
 .hero__visual {
   display: flex;
   justify-content: center;
+  align-self: end;
+}
+/* Le téléphone déborde légèrement en bas, comme sur la maquette */
+.hero__visual :deep(.phone) {
+  margin-bottom: -56px;
+}
+.hero__lines {
+  position: absolute;
+  top: 0;
+  right: 40px;
+  width: 220px;
+  height: 320px;
+  z-index: 1;
+  opacity: 0.7;
 }
 
-/* Vagues décoratives (indigo) en bas à droite */
+/* Vagues décoratives (indigo) en bas, façon empreinte digitale */
 .hero::after {
   content: "";
   position: absolute;
-  right: -120px;
-  bottom: -160px;
+  left: 44%;
+  bottom: -240px;
   width: 420px;
   height: 420px;
   border-radius: 50%;

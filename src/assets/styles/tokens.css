@@ -4,21 +4,27 @@
    rayons, polices). Aucun composant ne doit coder une couleur "en dur".
    ========================================================================= */
 :root {
-  /* Couleurs de marque */
+  /* Couleurs de marque (relevées sur la maquette) */
   --wave-cyan:       #18BEF2;
   --wave-cyan-deep:  #0FA6DE;
   --wave-navy:       #14104B;
   --wave-indigo:     #4136F5;
-  --wave-purple:     #4B3FE4;  /* écran de l'app dans le mockup */
+  --wave-purple:     #4B3FD4;  /* écran de l'app dans le mockup */
   --wave-yellow:     #FBD24E;
-  --wave-orange:     #DD5A1E;
+  --wave-orange:     #C13A0E;  /* bandeau « We're hiring » */
+
+  /* Section témoignages */
+  --wave-maroon:      #8A2A12;
+  --wave-yellow-card: #F9CD55;
+  --wave-brown:       #B5531B;  /* guillemets + nom du client */
 
   /* Neutres */
-  --paper:   #F4F5F7;
+  --paper:   #F7F7F8;
   --white:   #FFFFFF;
   --ink:     #14104B;
   --ink-soft:#57537C;
-  --line:    #E4E6EF;
+  --line:    #ECEEF4;
+  --black:   #1A1A1A;
 
   /* Typographie */
   --font: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;

@@ -3,9 +3,12 @@
 Projet pédagogique pour apprendre à **décomposer une maquette Figma** en composants
 selon la méthode **Atomic Design**, puis à la coder en **Vue 3**.
 
-Il reproduit deux écrans de Wave :
-1. La page d'accueil (bandeau + navbar + hero + mockup téléphone)
-2. La section « What you can do with Wave » (grille de 6 cartes)
+Il reproduit **une page d'accueil Wave complète** :
+1. Bandeau « We're hiring » + navbar (logo + menus)
+2. Hero (titre + sous-titre + badges stores + mockup téléphone)
+3. Section « What you can do with Wave » (grille de 6 cartes)
+4. Section témoignages clients (carrousel)
+5. Footer (liens + badges stores)
 
 ---
 
@@ -37,16 +40,20 @@ npm run preview
 
 ```
 src/
-├─ assets/styles/        → tokens.css (variables) + main.css (reset/base)
-├─ data/                 → contenu séparé du code (features, navigation, transactions)
+├─ assets/
+│  ├─ images/             → vrais assets : logo, badges stores, photos clients
+│  └─ styles/             → tokens.css (variables) + main.css (reset/base)
+├─ data/                 → contenu séparé du code
+│   features.js, navigation.js, transactions.js, testimonials.js, footer.js
 ├─ components/
 │  ├─ atoms/             → briques indivisibles
 │  │   BaseIcon, BaseHeading, BaseText, BaseButton, NavLink, StoreBadge, TheLogo
 │  ├─ molecules/         → petits groupes d'atomes
-│  │   FeatureCard, NavMenu, StoreButtons, ActionButton, TransactionRow
+│  │   FeatureCard, NavMenu, StoreButtons, ActionButton, TransactionRow, TestimonialCard
 │  ├─ organisms/         → grandes sections autonomes
-│  │   TheAnnouncementBar, TheNavbar, HeroSection, PhoneMockup, FeaturesSection
-│  └─ templates/         → squelette de page (mise en page + slot)
+│  │   TheAnnouncementBar, TheNavbar, HeroSection, PhoneMockup,
+│  │   FeaturesSection, TestimonialsSection, TheFooter
+│  └─ templates/         → squelette de page (chrome + slot)
 │      DefaultLayout
 ├─ pages/                → templates remplis de contenu
 │   HomePage

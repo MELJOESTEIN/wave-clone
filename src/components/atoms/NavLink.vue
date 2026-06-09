@@ -17,10 +17,10 @@ defineProps({
 <style scoped>
 .nav-link {
   text-decoration: none;
-  color: var(--wave-navy);
+  color: var(--black);
   font-weight: 700;
-  font-size: 0.95rem;
-  letter-spacing: 0.02em;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
   transition: color 0.16s ease;
 }
 .nav-link:hover {
