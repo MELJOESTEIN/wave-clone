@@ -5,8 +5,4 @@ import App from './App.vue'
 import './assets/styles/tokens.css'
 import './assets/styles/main.css'
 
-console.log('Vue app starting...')
-const app = createApp(App)
-console.log('App created:', app)
-app.mount('#app')
-console.log('App mounted to #app')
+createApp(App).mount('#app')
